@@ -1,5 +1,6 @@
 import { Client } from 'zaileys';
 import { handler } from './events/handler.js';
+import { middleware } from './middleware.js';
 
 const wa = new Client({
   session: 'reiyo',
@@ -22,4 +23,5 @@ const wa = new Client({
   },
 });
 
+middleware(wa);
 handler(wa);
