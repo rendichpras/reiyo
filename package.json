@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "format": "prettier --write .",
-    "dev": "bun --watch .",
-    "start": "bun ."
+    "dev": "bun --watch index.js",
+    "start": "bun index.js"
   },
   "devDependencies": {
     "@types/bun": "latest",

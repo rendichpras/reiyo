@@ -16,4 +16,8 @@ export function handler(wa) {
       }
     }
   });
+
+  wa.on('calls', (ctx) => {
+    console.log(ctx);
+  });
 }

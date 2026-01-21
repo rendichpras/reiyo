@@ -1,5 +1,5 @@
 import { Client } from 'zaileys';
-import { handler } from "./events/handler.js";
+import { handler } from './events/handler.js';
 
 const wa = new Client({
   session: 'reiyo',
