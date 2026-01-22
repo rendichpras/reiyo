@@ -17,8 +17,8 @@ const wa = new Client({
   autoMarkAI: true,
 
   citation: {
-    admin: async () => {
-      return [6281284900651];
+    owner: async () => {
+      return [Number(process.env.OWNER_NUMBER)];
     },
   },
 });

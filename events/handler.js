@@ -4,13 +4,13 @@ export function handler(wa) {
   });
 
   wa.on('messages', async (ctx) => {
-    const isAdmin = ctx.citation ? await ctx.citation.admin() : false;
+    const isOwner = ctx.citation ? await ctx.citation.owner() : false;
 
     console.log(ctx);
 
-    if (ctx.text?.trim() === 'ping') {
-      if (isAdmin) {
-        await wa.send(ctx.roomId, 'Admin');
+    if (ctx.text === 'ping') {
+      if (isOwner) {
+        await wa.send(ctx.roomId, 'Owner');
       } else {
         await wa.send(ctx.roomId, 'Pong!');
       }
